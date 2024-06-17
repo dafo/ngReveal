@@ -15,7 +15,8 @@ import { RevealUIModule } from '@revealbi/ui-angular';
     BrowserModule,
     HammerModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RevealUIModule
   ],
   providers: [],
   bootstrap: [AppComponent]

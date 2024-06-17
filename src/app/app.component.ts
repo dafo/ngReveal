@@ -2,6 +2,8 @@ import { AfterViewInit, Component } from '@angular/core';
 import { DashboardDateFilter, DashboardLink, DateField, DateLinkFilter, FunnelChartVisualization, LinkFilter, NumberField, PivotVisualization, RdashDocument, RestServiceBuilder, TextField, UrlLink, VisualizationLinker } from '@revealbi/dom';
 import { RevealSdkSettings, RevealViewOptions, MenuItem, SeriesColorRequestedArgs } from '@revealbi/ui';
 
+RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +13,29 @@ export class AppComponent {
   title = 'Home - IgniteUI for Angular';
   open:boolean = true;
   dashboard: any;
+  /* Options currently supported by AB:
+    root level:
+      canEdit
+      canSaveAs
+      startInEditMode
+
+    header:
+      showHeader
+      canAddVisualization
+      menu:
+        refresh
+        exportToImage
+        exportToExcel
+        exportToPowerPoint
+        exportToPdf
+
+    visualizations:
+      canMaximize
+      hoverTooltips
+      crosshairs
+      menu:
+        copy
+        duplicate */
   options: RevealViewOptions = {
     filters: {
       showFilters: false,
