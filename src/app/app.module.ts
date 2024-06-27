@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MasterViewComponent } from './master-view/master-view.component';
-import { RevealUIModule } from '@revealbi/ui-angular';
 
 @NgModule({
   declarations: [
@@ -15,10 +14,10 @@ import { RevealUIModule } from '@revealbi/ui-angular';
     BrowserModule,
     HammerModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    RevealUIModule
+    BrowserAnimationsModule
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {
